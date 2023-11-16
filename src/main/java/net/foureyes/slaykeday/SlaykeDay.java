@@ -1,6 +1,9 @@
 package net.foureyes.slaykeday;
 
 import com.mojang.logging.LogUtils;
+import net.foureyes.slaykeday.item.ModCreativeModTabs;
+import net.foureyes.slaykeday.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -26,6 +29,10 @@ public class SlaykeDay {
     public SlaykeDay() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -38,7 +45,10 @@ public class SlaykeDay {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.SLAYKINITE_INGOT);
+            event.accept(ModItems.RAW_SLAYKINITE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
