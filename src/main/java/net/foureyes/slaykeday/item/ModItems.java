@@ -17,6 +17,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SLAYKINITE_NUGGET = ITEMS.register("slaykinite_nugget",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_OPAL = ITEMS.register("black_opal",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> NETHERITE_ROD = ITEMS.register("netherite_rod",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

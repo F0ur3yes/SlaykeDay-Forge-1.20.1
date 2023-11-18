@@ -20,6 +20,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.RAW_SLAYKINITE.get());
                         pOutput.accept(ModItems.SLAYKINITE_INGOT.get());
                         pOutput.accept(ModItems.SLAYKINITE_NUGGET.get());
+                        pOutput.accept(ModItems.BLACK_OPAL.get());
+                        pOutput.accept(ModItems.NETHERITE_ROD.get());
                     })
                     .build());
 
