@@ -1,6 +1,7 @@
 package net.foureyes.slaykeday.item;
 
 import net.foureyes.slaykeday.SlaykeDay;
+import net.foureyes.slaykeday.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,7 +21,11 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.RAW_SLAYKINITE.get());
                         pOutput.accept(ModItems.SLAYKINITE_INGOT.get());
                         pOutput.accept(ModItems.SLAYKINITE_NUGGET.get());
+
+                        pOutput.accept(ModBlocks.BLACK_OPAL_ORE.get());
+                        pOutput.accept(ModBlocks.DEEPSLATE_BLACK_OPAL_ORE.get());
                         pOutput.accept(ModItems.BLACK_OPAL.get());
+
                         pOutput.accept(ModItems.NETHERITE_ROD.get());
                     })
                     .build());

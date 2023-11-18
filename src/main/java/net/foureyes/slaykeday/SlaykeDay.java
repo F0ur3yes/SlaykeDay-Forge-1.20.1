@@ -1,6 +1,7 @@
 package net.foureyes.slaykeday;
 
 import com.mojang.logging.LogUtils;
+import net.foureyes.slaykeday.block.ModBlocks;
 import net.foureyes.slaykeday.item.ModCreativeModTabs;
 import net.foureyes.slaykeday.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -32,6 +33,7 @@ public class SlaykeDay {
         ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

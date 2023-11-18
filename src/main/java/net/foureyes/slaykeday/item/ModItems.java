@@ -11,6 +11,8 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, SlaykeDay.MOD_ID);
 
+    // ITEMS START HERE //
+
     public static final RegistryObject<Item> RAW_SLAYKINITE = ITEMS.register("raw_slaykinite",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SLAYKINITE_INGOT = ITEMS.register("slaykinite_ingot",
@@ -21,6 +23,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> NETHERITE_ROD = ITEMS.register("netherite_rod",
             () -> new Item(new Item.Properties()));
+
+    // ITEMS END HERE //
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
